@@ -13,7 +13,7 @@ public class H2DatasourceConfiguration {
 
     @Bean
     @Primary
-    @ConfigurationProperties("aaa.h2")
+    @ConfigurationProperties("spring.datasource.h2")
     public DataSourceProperties h2DataSourceProperties() {
         return new DataSourceProperties();
     }
