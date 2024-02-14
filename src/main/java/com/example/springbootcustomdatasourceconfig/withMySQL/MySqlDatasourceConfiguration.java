@@ -27,6 +27,7 @@ public class MySqlDatasourceConfiguration {
     }*/
 
     // another way to define the custom datasource
+    // https://youtrack.jetbrains.com/issue/IDEA-346177
     @Bean
     @ConfigurationProperties("spring.datasource.mysql")
     public DataSource mysqlDataSource() {
