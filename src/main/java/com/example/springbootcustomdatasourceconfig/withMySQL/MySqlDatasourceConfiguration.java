@@ -13,7 +13,7 @@ import javax.sql.DataSource;
 @Configuration
 public class MySqlDatasourceConfiguration {
 
-   /* @Bean
+    @Bean
     @ConfigurationProperties("spring.datasource.mysql")
     public DataSourceProperties mysqlDataSourceProperties() {
         return new DataSourceProperties();
@@ -24,13 +24,13 @@ public class MySqlDatasourceConfiguration {
         return mysqlDataSourceProperties()
                 .initializeDataSourceBuilder()
                 .build();
-    }*/
+    }
 
     // another way to define the custom datasource
     // https://youtrack.jetbrains.com/issue/IDEA-346177
-    @Bean
+   /* @Bean
     @ConfigurationProperties("spring.datasource.mysql")
     public DataSource mysqlDataSource() {
         return DataSourceBuilder.create().type(MysqlDataSource.class).build();
-    }
+    }*/
 }
