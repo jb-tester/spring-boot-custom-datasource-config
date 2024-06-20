@@ -12,5 +12,7 @@
   see the MySqlDatasourceConfiguration class
    https://youtrack.jetbrains.com/issue/IDEA-346177 
 
+- no gutter actions for datasource creating/navigating for configuration properties -
+  https://youtrack.jetbrains.com/issue/IDEA-355261
 
 
