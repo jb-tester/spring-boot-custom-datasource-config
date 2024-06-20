@@ -2,6 +2,7 @@ package com.example.springbootcustomdatasourceconfig;
 
 import com.example.springbootcustomdatasourceconfig.withH2.TeamService;
 import com.example.springbootcustomdatasourceconfig.withMySQL.ContactService;
+import com.example.springbootcustomdatasourceconfig.withPostgres.PersonService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,10 +12,12 @@ public class SpringBootCustomDatasourceConfigApplication implements CommandLineR
 
     private final TeamService teamService;
     private final ContactService contactService;
+    private final PersonService personService;
 
-    public SpringBootCustomDatasourceConfigApplication(TeamService teamService, ContactService contactService) {
+    public SpringBootCustomDatasourceConfigApplication(TeamService teamService, ContactService contactService, PersonService personService) {
         this.teamService = teamService;
         this.contactService = contactService;
+        this.personService = personService;
     }
 
     public static void main(String[] args) {
@@ -28,6 +31,8 @@ public class SpringBootCustomDatasourceConfigApplication implements CommandLineR
         teamService.displayAllTeams();
         System.out.println("===============  test MySQL datasource: ==============");
         contactService.displayAllTeams();
+        System.out.println("===============  test Postgres datasource: ==============");
+        personService.displayAllPerson();
         System.out.println("=======================================================");
 
     }
