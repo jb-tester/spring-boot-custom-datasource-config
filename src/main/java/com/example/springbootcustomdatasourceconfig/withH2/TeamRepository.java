@@ -6,8 +6,6 @@ import java.util.List;
 
 
 public interface TeamRepository extends CrudRepository<Team,Integer> {
-    List<Team> findByTitle(String title);
 
-    List<Team> findByAmountGreaterThan(int value);
 }
 
