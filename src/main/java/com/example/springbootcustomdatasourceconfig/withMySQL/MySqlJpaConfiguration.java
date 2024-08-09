@@ -34,7 +34,7 @@ public class MySqlJpaConfiguration {
 
     @Bean
     public PlatformTransactionManager mysqlTransactionManager(
-      @Qualifier("h2EntityManagerFactory") LocalContainerEntityManagerFactoryBean mysqlEntityManagerFactory) {
+      @Qualifier("mysqlEntityManagerFactory") LocalContainerEntityManagerFactoryBean mysqlEntityManagerFactory) {
         return new JpaTransactionManager(Objects.requireNonNull(mysqlEntityManagerFactory.getObject()));
     }
 }
